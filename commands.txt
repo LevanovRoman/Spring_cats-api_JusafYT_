@@ -1,0 +1,19 @@
+docker-compose --version
+docker-compose -f compose-env.yaml up -d
+
+
+cd .\cats-api\
+cd .\cats-api\
+
+docker login
+docker build . -t levanovroman/cats-api:1.0.0
+
+docker rmi levanovroman/cats-api:1.0.0
+docker run -ti --rm levanovroman/cats-api:1.0.0
+docker run -ti --rm -e DATASOURCE_HOST=192.168.42.1 levanovroman/cats-api:1.0.0
+docker run -ti --rm -e DATASOURCE_HOST=192.168.42.1 -p 8081:8080 levanovroman/cats-api:1.0.0
+
+ 172.16.15.75
+172.16.1.35
+172.21.96.1
+172.18.176.1
